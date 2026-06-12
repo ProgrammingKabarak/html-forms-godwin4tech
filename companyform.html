@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rosswell Company Registration Form</title>
+</head>
+<body>
+
+    <h1>Rosswell Company Registration</h1>
+
+    <form method="post" action="#">
+
+        <fieldset>
+            <legend>Personal Information</legend>
+
+            <label for="fullname">Full Name:</label><br>
+            <input type="text" id="fullname" name="fullname"
+                   required minlength="3" maxlength="50"><br><br>
+
+            <label for="email">Email Address:</label><br>
+            <input type="email" id="email" name="email"
+                   required><br><br>
+
+            <label for="phone">Phone Number:</label><br>
+            <input type="tel" id="phone" name="phone"
+                   pattern="[0-9]{10,15}"
+                   required><br><br>
+        </fieldset>
+
+        <br>
+
+        <fieldset>
+            <legend>Company Information</legend>
+
+            <label for="company">Company Name:</label><br>
+            <input type="text" id="company" name="company"
+                   value="Rosswell Company"
+                   required minlength="3" maxlength="50"><br><br>
+
+            <label for="website">Company Website:</label><br>
+            <input type="url" id="website" name="website"
+                   required><br><br>
+
+            <label for="size">Company Size:</label><br>
+            <select id="size" name="size" required>
+                <option value="">Select Company Size</option>
+                <option>1 - 10 Employees</option>
+                <option>11 - 50 Employees</option>
+                <option>51 - 100 Employees</option>
+                <option>100+ Employees</option>
+            </select><br><br>
+
+            <label for="industry">Industry:</label><br>
+            <input type="text" id="industry" name="industry"
+                   required minlength="3" maxlength="30"><br><br>
+        </fieldset>
+
+        <br>
+
+        <fieldset>
+            <legend>Service Request</legend>
+
+            <p>Service Type:</p>
+
+            <input type="radio" id="web" name="service" value="Web Development" required>
+            <label for="web">Web Development</label><br>
+
+            <input type="radio" id="mobile" name="service" value="Mobile Development">
+            <label for="mobile">Mobile Development</label><br>
+
+            <input type="radio" id="consulting" name="service" value="IT Consulting">
+            <label for="consulting">IT Consulting</label><br><br>
+
+            <p>Preferred Contact Method:</p>
+
+            <input type="checkbox" id="emailcontact" name="contact" value="Email">
+            <label for="emailcontact">Email</label><br>
+
+            <input type="checkbox" id="phonecontact" name="contact" value="Phone">
+            <label for="phonecontact">Phone</label><br>
+
+            <input type="checkbox" id="smscontact" name="contact" value="SMS">
+            <label for="smscontact">SMS</label><br><br>
+
+            <label for="date">Appointment Date:</label><br>
+            <input type="date" id="date" name="date" required><br><br>
+
+            <label for="time">Appointment Time:</label><br>
+            <input type="time" id="time" name="time" required><br><br>
+
+            <label for="budget">Budget Range (KES):</label><br>
+            <input type="number" id="budget" name="budget"
+                   min="1000" max="1000000" required><br><br>
+        </fieldset>
+
+        <br>
+
+        <fieldset>
+            <legend>Message and Agreement</legend>
+
+            <label for="message">Additional Information:</label><br>
+            <textarea id="message" name="message"
+                      rows="5" cols="40"
+                      minlength="10" maxlength="500"></textarea><br><br>
+
+            <input type="checkbox" id="terms" name="terms" required>
+            <label for="terms">I agree to the Terms and Conditions</label>
+        </fieldset>
+
+        <br>
+
+        <input type="submit" value="Submit">
+        <input type="reset" value="Reset">
+
+    </form>
+
+</body>
+</html>
